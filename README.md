@@ -2,13 +2,10 @@
 
 Efficiently jumpstart your Python projects with boilerplate-poetry-project
 
+**Purpose of this repository:**
 
-
-Purpose:
-
-1. This can serve as a starting point for setting up your python repository
-2. Explains how to publish code as a python package to a private repository
-
+1. **Streamline Project Setup:** This repository serves as a boilerplate to efficiently set up your Python project using Poetry for dependency management.
+2. **Private Package Publishing:** Documents the process of publishing code as a Python package within a private repository (instructions not included but can be found in the Poetry documentation).
 
 # Getting Started
 
