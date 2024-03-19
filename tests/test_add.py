@@ -1,4 +1,4 @@
-from add import add_int
+from boilerplate_poetry_project.add import add_int
 
 def test_add_int():
   """Tests add_int function with positive integers"""
