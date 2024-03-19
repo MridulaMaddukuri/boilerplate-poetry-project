@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "boilerplate-poetry-project"
+version = "0.1.0"
+description = "Efficiently jumpstart your Python projects"
+authors = ["Mridula Maddukuri <mridulamaddukuri@utexas.edu>"]
+readme = "README.md"
+packages = [{include = "boilerplate_poetry_project"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
