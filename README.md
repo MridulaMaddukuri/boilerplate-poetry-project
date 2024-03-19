@@ -37,6 +37,7 @@ Refer to their documentation for installation instructions.
      ```bash
      pyenv local 3.11.4
      ```
+
      This sets Python 3.11.4 as the active version in your current shell.
 3. **Initialize the Poetry Environment:**
 
@@ -45,6 +46,7 @@ Refer to their documentation for installation instructions.
      ```bash
      poetry init
      ```
+
      This creates a `pyproject.toml` file, which serves as the configuration center for your project's dependencies.
 4. **Verify Poetry Environment Information:**
 
@@ -60,6 +62,7 @@ Refer to their documentation for installation instructions.
      ```bash
      poetry env use python3.11
      ```
+
      Replace `python3.11` with the appropriate version for your project.
 6. **Enter the Poetry Shell (Optional):**
 
@@ -70,3 +73,33 @@ Refer to their documentation for installation instructions.
      ```
 
    This launches a new shell pre-configured with the project's environment. The virtual environment name will be reflected in the prompt (e.g., `(my-project-3.11) $`).
+
+
+## Note Regarding Folder Naming Conventions
+
+Folder naming conventions in Poetry projects based on your approach to project creation:
+
+**1. Using `poetry new`:**
+
+When you create a new project using `poetry new project-name`, Poetry will automatically generate a folder named after your chosen project name (e.g., `project-name`) with the following structure:
+
+```
+poetry-project
+├── pyproject.toml
+├── README.md
+├──poetry_project
+│   └── __init__.py
+└── tests
+    └── __init__.py
+
+```
+
+Reference: https://python-poetry.org/docs/basic-usage/#project-setup
+
+**2. Using `poetry init` in an Existing Folder:**
+
+If you initialize a Poetry project within an existing folder using `poetry init` (how this repo was set up), ensure the folder name adheres to the following guidelines:
+
+* Use lowercase letters and underscores (`_`) only (no hyphens or other special characters).
+* The naming convention should match your project name. For example, if your Poetry project name is `my-project`, the enclosing folder should be named `my_project`.
+* Using underscores in folder names aligns with how Python expects modules to be structured for import.
