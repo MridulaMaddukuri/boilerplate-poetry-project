@@ -7,7 +7,7 @@ Efficiently jumpstart your Python projects with boilerplate-poetry-project. Try 
 1. **Streamline Project Setup:** This repository serves as a boilerplate to efficiently set up your Python project using Poetry for dependency management.
 2. **Private Package Publishing:** Documents the process of publishing code as a Python package within a private repository (instructions not included but can be found in the Poetry documentation).
 
-# Getting Started
+## Getting Started
 
 This project leverages `pyenv` and `poetry` for streamlined environment management. Make sure you have them installed before proceeding.
 
@@ -109,3 +109,51 @@ If you initialize a Poetry project within an existing folder using `poetry init`
 * Use lowercase letters and underscores (`_`) only (no hyphens or other special characters).
 * The naming convention should match your project name. For example, if your Poetry project name is `my-project`, the enclosing folder should be named `my_project`.
 * Using underscores in folder names aligns with how Python expects modules to be structured for import.
+
+
+## Project Dependencies
+
+This project uses several dependencies managed by Poetry to streamline development, testing, and project management. Below is a list of key dependencies and a brief description of their purpose:
+
+- **pyenv**: A tool that allows for easy installation and management of multiple Python versions. It's used to set a specific Python version for our project to ensure consistency across development environments.
+
+- **Poetry**: A dependency management and packaging tool in Python. It's used to declare project libraries, manage their versions, and set up the project's virtual environment.
+
+- **pytest**: A framework that makes it easy to write simple tests, yet scales to support complex functional testing. It's used for writing and running our project's tests.
+
+- **pytest-cov**: A plugin for pytest that provides test coverage reporting for our tests. It's useful for identifying parts of the codebase that may not be adequately tested.
+
+- **Hypothesis**: A library for property-based testing. With Hypothesis, you can write tests that are parameterized according to a source of examples. It's used to generate test cases that might not have been manually considered.
+
+- **mypy**: An optional static type checker for Python. Mypy checks that the type hints in the codebase are being followed correctly, helping to catch type-related errors before runtime.
+
+- **pre-commit**: A framework for managing and maintaining multi-language pre-commit hooks. It's used to run checks on the code before committing, ensuring code quality and style consistency.
+
+- **isort**: A Python utility/library to sort imports alphabetically and automatically separate them into sections. It ensures that import statements are clean and consistently formatted.
+
+- **ruff**: An extremely fast Python linter. It's used to catch syntax errors and stylistic issues before they make it into the codebase.
+
+
+## Running Tests and Checking Test Coverage
+
+Ensuring that your code is well-tested is crucial for maintaining high-quality software. This project uses `pytest` for testing and `pytest-cov` to check test coverage. Here's how you can run tests and generate coverage reports.
+
+### Running Tests
+
+To run all tests in the project, navigate to the project's root directory and use the following command:
+
+```bash
+poetry run pytest
+```
+
+This command runs all tests in the project, ensuring that all tests pass.
+
+### Checking Test Coverage
+
+To generate a coverage report, use the following command:
+
+```bash
+poetry run pytest --cov
+```
+
+This command runs all tests in the project and generates a coverage report, showing which parts of the codebase are covered by tests.
