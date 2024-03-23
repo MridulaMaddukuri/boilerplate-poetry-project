@@ -1,4 +1,4 @@
-def multiply(x: int, y: int) -> int:
+def multiply_int(x: int, y: int) -> int:
     """Multiply two integers.
 
     Parameters:
@@ -12,7 +12,7 @@ def multiply(x: int, y: int) -> int:
     - TypeError: If either x or y is not an integer.
 
     Example:
-    >>> multiply(2, 3)
+    >>> multiply_int(2, 3)
     6
     """
     if not isinstance(x, int) or not isinstance(y, int):
