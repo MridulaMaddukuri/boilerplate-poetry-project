@@ -9,7 +9,7 @@ Efficiently jumpstart your Python projects with boilerplate-poetry-project
 
 # Getting Started
 
-This project leverages `pyenv` and `poetry` for streamlined environment management. Make sure you have them installed before proceeding. 
+This project leverages `pyenv` and `poetry` for streamlined environment management. Make sure you have them installed before proceeding.
 
 Refer to their documentation for installation instructions.
 
@@ -52,9 +52,15 @@ Refer to their documentation for installation instructions.
 
    * To view details about the active virtual environment, including the Python version, platform, and paths
 
-     ```
+     ```bash
      poetry env info
+     poetry env info -p  # to view the path only
      ```
+   * Optional: To ensure virtual environments are created inside your project folder, change the configuration setting and `poetry install` to see the creation of `.venv` folder
+
+   ```bash
+   poetry config virtualenvs.in-project true
+   ```
 5. **Activate the Poetry Environment (if necessary):**
 
    * If `pyenv` isn't managing your system-wide Python version or you want to explicitly activate the project's environment
@@ -73,7 +79,6 @@ Refer to their documentation for installation instructions.
      ```
 
    This launches a new shell pre-configured with the project's environment. The virtual environment name will be reflected in the prompt (e.g., `(my-project-3.11) $`).
-
 
 ## Note Regarding Folder Naming Conventions
 
