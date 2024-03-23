@@ -92,10 +92,11 @@ When you create a new project using `poetry new project-name`, Poetry will autom
 poetry-project
 ├── pyproject.toml
 ├── README.md
-├──poetry_project
+├── poetry_project
 │   └── __init__.py
 └── tests
-    └── __init__.py
+│    └── __init__.py 
+└── .pre-commit-config.yaml
 
 ```
 
