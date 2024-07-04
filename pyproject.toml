@@ -8,6 +8,7 @@ packages = [{include = "boilerplate_poetry_project"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+flask = "^3.0.3"
 
 
 [tool.poetry.group.dev.dependencies]
