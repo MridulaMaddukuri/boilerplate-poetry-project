@@ -157,3 +157,32 @@ poetry run pytest --cov
 ```
 
 This command runs all tests in the project and generates a coverage report, showing which parts of the codebase are covered by tests.
+
+### API - api.py
+
+This API provides an endpoint for adding two integers together.
+
+#### Running the API
+You can run the API locally using Python: `poetry run python api.py` 
+
+This will start the Flask development server, making the API accessible at http://127.0.0.1:5000/add by default.
+
+#### Testing the API Using CURL:
+
+Open a terminal window and send a POST request with JSON data containing the x and y values to the API endpoint:
+
+`curl -X POST http://127.0.0.1:5000/add -H 'Content-Type: application/json' -d '{"x": 5, "y": 3}'`
+
+This command will output the JSON response from the API, which should look like:
+
+`{"result": 8}`
+
+#### Testing the API Using Postman:
+
+1. Open Postman and create a new POST request
+2. Set the base URL to http://127.0.0.1:5000/add.
+3. In the Headers tab, add a key-value pair:
+      Key: Content-Type
+      Value: application/json
+4. In the Body tab, select JSON and paste the following data: `{"x": 5,"y": 3}`
+5. Click the Send button. The response should be displayed in the Response tab, with a status code of 200 (OK) and a JSON body similar to:`{"result": 8}`
